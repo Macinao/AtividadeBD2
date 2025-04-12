@@ -45,10 +45,11 @@ public class UsuarioDAO {
             System.out.println(sql + " sql gerada");
 
             PreparedStatement statement = conexao.prepareStatement(sql);
-            statement.setString(1, usuario.getLogin());
-            statement.setString(2, usuario.getSenha());
+            statement.setString(1, usuario.getSenha());
+            statement.setString(2, usuario.getLogin());
 
             statement.executeUpdate();
+
         } else{
             System.out.println("Usuario nao existe");
         }
